@@ -140,6 +140,7 @@ if predict_button:
     "age" : age,
     "gender" : gender_map[gender],
     "fever" : int(fever),
+    "cough" : int(cough),
     "headache" : int(headache),
     "chest_pain" : int(chest_pain),
     "stomach_pain" : int(stomach_pain),
@@ -165,7 +166,7 @@ if predict_button:
     patient[cols_to_scale]
   )
   
-  prediction=  model.predict(
+  prediction = model.predict(
     patient_scaled[features]
   )[0]
   
